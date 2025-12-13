@@ -4,6 +4,7 @@
   "package": "com.mavagk.extrareindevcommandsandgamerules.mixins",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "MixinClientPlayerCommandHandler"
+    "MixinClientPlayerCommandHandler",
+    "MixinEntityPlayer"
   ]
 }
