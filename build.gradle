@@ -1,0 +1,40 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        maven { url 'https://cdn.fox2code.com/maven' }
+    }
+    dependencies {
+        classpath('com.fox2code.FoxLoader:dev:2.0-alpha36')
+    }
+}
+
+apply plugin: 'foxloader.dev'
+
+group = 'com.mavagk'
+version = '0.0.0'
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+jar {
+    from "LICENSE"
+}
+
+foxloader {
+    modId = "extrareindevcommandsandgamerules"
+    modName = "Extra ReIndev Commands and Gamerules"
+    modIcon = "assets/extrareindevcommandsandgamerules/icon.png"
+    modVersion = project.version
+    modAuthors = "Mavagk"
+    modWebsite = "https://github.com/Fox2Code/FoxLoaderExampleMod"
+    modMain = "com.mavagk.extrareindevcommandsandgamerules.ExtraReIndevCommandsAndGamerules"
+    modDesc("Some extra commands and gamerules for ReIndev.")
+    modDesc()
+    modDesc()
+}
