@@ -42,7 +42,9 @@ public class OriginCommand extends Command {
 	}
 
 	@Override
-	public void printHelpInformation(ICommandListener commandExecutor) {}
+	public void printHelpInformation(ICommandListener commandExecutor) {
+		commandExecutor.log("command.extrareindevcommandsandgamerules.origin.info");
+	}
 
 	@Override
 	public String commandSyntax() {

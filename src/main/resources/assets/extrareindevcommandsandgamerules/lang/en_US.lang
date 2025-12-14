@@ -1,0 +1,10 @@
+command.extrareindevcommandsandgamerules.origin.info=§dTeleports selected entities to (0, 150, 0).
+
+command.extrareindevcommandsandgamerules.day.info0=§dSets the time to day.
+command.extrareindevcommandsandgamerules.day.info1=§7A shortcut for §d/time set day§7.
+command.extrareindevcommandsandgamerules.noon.info0=§dSets the time to noon.
+command.extrareindevcommandsandgamerules.noon.info1=§7A shortcut for §d/time set noon§7.
+command.extrareindevcommandsandgamerules.sunset.info0=§dSets the time to sunset.
+command.extrareindevcommandsandgamerules.sunset.info1=§7A shortcut for §d/time set sunset§7.
+command.extrareindevcommandsandgamerules.night.info0=§dSets the time to night.
+command.extrareindevcommandsandgamerules.night.info1=§7A shortcut for §d/time set night§7.
