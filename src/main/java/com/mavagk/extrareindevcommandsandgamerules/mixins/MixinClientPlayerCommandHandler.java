@@ -14,7 +14,6 @@ import net.minecraft.common.command.Command;
 @Mixin(ClientPlayerCommandHandler.class)
 public abstract class MixinClientPlayerCommandHandler {
 	@Inject(method = "registerCommands", at = @At("TAIL"), cancellable = true)
-	@SuppressWarnings("unused")
 	private void registerCommands(Minecraft mc, CallbackInfo info) {
 		((ClientPlayerCommandHandler)(Object)this).addCommand((Command)new OriginCommand());
 	}

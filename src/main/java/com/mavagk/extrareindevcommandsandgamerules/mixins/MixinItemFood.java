@@ -5,7 +5,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import com.mavagk.extrareindevcommandsandgamerules.ExtraReIndevCommandsAndGamerules;
+import com.mavagk.extrareindevcommandsandgamerules.ModGamerules;
 
 import net.minecraft.common.entity.player.EntityPlayer;
 import net.minecraft.common.item.ItemStack;
@@ -18,9 +18,8 @@ public class MixinItemFood {
 	public int healAmount;
 
 	@Inject(method = "onItemRightClick", at = @At("HEAD"), cancellable = true)
-	@SuppressWarnings("unused")
 	private void onItemRightClick(ItemStack item, World world, EntityPlayer player, CallbackInfoReturnable<ItemStack> info) {
-		if (ExtraReIndevCommandsAndGamerules.allowInstantEating.getBoolean(world.getSaveHandler())) {
+		if (ModGamerules.allowInstantEating.getBoolean(world.getSaveHandler())) {
 			if (player.canEat(this.alwaysEdible))
 				((ItemFood)(Object)this).onEaten(item, world, player);
 			info.setReturnValue(item);
