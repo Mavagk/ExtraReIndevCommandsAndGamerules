@@ -29,3 +29,5 @@ command.extrareindevcommandsandgamerules.rain.info0=§dSets the weather to rain.
 command.extrareindevcommandsandgamerules.rain.info1=§7A shortcut for §d/weather rain§7.
 command.extrareindevcommandsandgamerules.thunder.info0=§dSets the weather to thunder.
 command.extrareindevcommandsandgamerules.thunder.info1=§7A shortcut for §d/weather thunder§7.
+
+tile.extrareindevcommandsandgamerules.bed.sleepDisabled=Sleeping has been disabled

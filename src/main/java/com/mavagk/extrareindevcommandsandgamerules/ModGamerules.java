@@ -7,4 +7,5 @@ public class ModGamerules {
 	public static final Gamerule allowSurvivalSprinting = Gamerules.registerBooleanGamerule("allowSurvivalSprinting", true);
 	public static final Gamerule allowInstantEating = Gamerules.registerBooleanGamerule("allowInstantEating", false);
 	public static final Gamerule allowFoodStacking = Gamerules.registerBooleanGamerule("allowFoodStacking", true);
+	public static final Gamerule allowSleeping = Gamerules.registerBooleanGamerule("allowSleeping", true);
 }
