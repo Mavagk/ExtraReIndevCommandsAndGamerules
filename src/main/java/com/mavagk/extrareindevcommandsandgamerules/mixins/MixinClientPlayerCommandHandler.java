@@ -8,14 +8,18 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import com.mavagk.extrareindevcommandsandgamerules.command.CreativeCommand;
 import com.mavagk.extrareindevcommandsandgamerules.command.DayCommand;
 import com.mavagk.extrareindevcommandsandgamerules.command.EasyCommand;
+import com.mavagk.extrareindevcommandsandgamerules.command.FairCommand;
 import com.mavagk.extrareindevcommandsandgamerules.command.HardCommand;
 import com.mavagk.extrareindevcommandsandgamerules.command.NightCommand;
 import com.mavagk.extrareindevcommandsandgamerules.command.NoonCommand;
 import com.mavagk.extrareindevcommandsandgamerules.command.NormalCommand;
 import com.mavagk.extrareindevcommandsandgamerules.command.OriginCommand;
 import com.mavagk.extrareindevcommandsandgamerules.command.PeacefulCommand;
+import com.mavagk.extrareindevcommandsandgamerules.command.RainCommand;
 import com.mavagk.extrareindevcommandsandgamerules.command.SunsetCommand;
 import com.mavagk.extrareindevcommandsandgamerules.command.SurvivalCommand;
+import com.mavagk.extrareindevcommandsandgamerules.command.ThunderCommand;
+import com.mavagk.extrareindevcommandsandgamerules.command.ToggledownfallCommand;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.command.ClientPlayerCommandHandler;
@@ -36,5 +40,9 @@ public abstract class MixinClientPlayerCommandHandler {
 		((ClientPlayerCommandHandler)(Object)this).addCommand((Command)new EasyCommand());
 		((ClientPlayerCommandHandler)(Object)this).addCommand((Command)new NormalCommand());
 		((ClientPlayerCommandHandler)(Object)this).addCommand((Command)new HardCommand());
+		((ClientPlayerCommandHandler)(Object)this).addCommand((Command)new FairCommand());
+		((ClientPlayerCommandHandler)(Object)this).addCommand((Command)new RainCommand());
+		((ClientPlayerCommandHandler)(Object)this).addCommand((Command)new ThunderCommand());
+		((ClientPlayerCommandHandler)(Object)this).addCommand((Command)new ToggledownfallCommand());
 	}
 }

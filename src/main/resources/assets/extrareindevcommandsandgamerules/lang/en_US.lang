@@ -22,3 +22,10 @@ command.extrareindevcommandsandgamerules.normal.info=§dSets the difficulty to n
 command.extrareindevcommandsandgamerules.normal.execute=Set the difficulty to normal mode.
 command.extrareindevcommandsandgamerules.hard.info=§dSets the difficulty to hard.
 command.extrareindevcommandsandgamerules.hard.execute=Set the difficulty to hard mode.
+
+command.extrareindevcommandsandgamerules.fair.info0=§dSets the weather to clear.
+command.extrareindevcommandsandgamerules.fair.info1=§7A shortcut for §d/weather clear§7.
+command.extrareindevcommandsandgamerules.rain.info0=§dSets the weather to rain.
+command.extrareindevcommandsandgamerules.rain.info1=§7A shortcut for §d/weather rain§7.
+command.extrareindevcommandsandgamerules.thunder.info0=§dSets the weather to thunder.
+command.extrareindevcommandsandgamerules.thunder.info1=§7A shortcut for §d/weather thunder§7.

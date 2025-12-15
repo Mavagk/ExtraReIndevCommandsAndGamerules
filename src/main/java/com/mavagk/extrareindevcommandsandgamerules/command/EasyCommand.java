@@ -9,7 +9,7 @@ import net.minecraft.common.util.ChatColors;
 
 public class EasyCommand extends Command {
 	public EasyCommand() {
-		super("easy", false, false);
+		super("easy", true, false);
 	}
 
 	@Override

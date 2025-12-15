@@ -9,7 +9,7 @@ import net.minecraft.common.util.ChatColors;
 
 public class NormalCommand extends Command {
 	public NormalCommand() {
-		super("normal", false, false);
+		super("normal", true, false);
 	}
 
 	@Override

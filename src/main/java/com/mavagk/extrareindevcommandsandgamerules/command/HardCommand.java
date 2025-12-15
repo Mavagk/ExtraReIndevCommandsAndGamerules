@@ -9,7 +9,7 @@ import net.minecraft.common.util.ChatColors;
 
 public class HardCommand extends Command {
 	public HardCommand() {
-		super("hard", false, false);
+		super("hard", true, false);
 	}
 
 	@Override
