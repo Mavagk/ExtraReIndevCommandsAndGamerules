@@ -5,11 +5,17 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
+import com.mavagk.extrareindevcommandsandgamerules.command.CreativeCommand;
 import com.mavagk.extrareindevcommandsandgamerules.command.DayCommand;
+import com.mavagk.extrareindevcommandsandgamerules.command.EasyCommand;
+import com.mavagk.extrareindevcommandsandgamerules.command.HardCommand;
 import com.mavagk.extrareindevcommandsandgamerules.command.NightCommand;
 import com.mavagk.extrareindevcommandsandgamerules.command.NoonCommand;
+import com.mavagk.extrareindevcommandsandgamerules.command.NormalCommand;
 import com.mavagk.extrareindevcommandsandgamerules.command.OriginCommand;
+import com.mavagk.extrareindevcommandsandgamerules.command.PeacefulCommand;
 import com.mavagk.extrareindevcommandsandgamerules.command.SunsetCommand;
+import com.mavagk.extrareindevcommandsandgamerules.command.SurvivalCommand;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.command.ClientPlayerCommandHandler;
@@ -24,5 +30,11 @@ public abstract class MixinClientPlayerCommandHandler {
 		((ClientPlayerCommandHandler)(Object)this).addCommand((Command)new NoonCommand());
 		((ClientPlayerCommandHandler)(Object)this).addCommand((Command)new SunsetCommand());
 		((ClientPlayerCommandHandler)(Object)this).addCommand((Command)new NightCommand());
+		((ClientPlayerCommandHandler)(Object)this).addCommand((Command)new SurvivalCommand());
+		((ClientPlayerCommandHandler)(Object)this).addCommand((Command)new CreativeCommand());
+		((ClientPlayerCommandHandler)(Object)this).addCommand((Command)new PeacefulCommand());
+		((ClientPlayerCommandHandler)(Object)this).addCommand((Command)new EasyCommand());
+		((ClientPlayerCommandHandler)(Object)this).addCommand((Command)new NormalCommand());
+		((ClientPlayerCommandHandler)(Object)this).addCommand((Command)new HardCommand());
 	}
 }

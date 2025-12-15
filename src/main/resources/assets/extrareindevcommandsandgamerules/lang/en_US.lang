@@ -8,3 +8,17 @@ command.extrareindevcommandsandgamerules.sunset.info0=§dSets the time to sunset
 command.extrareindevcommandsandgamerules.sunset.info1=§7A shortcut for §d/time set sunset§7.
 command.extrareindevcommandsandgamerules.night.info0=§dSets the time to night.
 command.extrareindevcommandsandgamerules.night.info1=§7A shortcut for §d/time set night§7.
+
+command.extrareindevcommandsandgamerules.survival.info0=§dSets the gamemode of the player to survival mode.
+command.extrareindevcommandsandgamerules.survival.info1=§7A shortcut for §d/gamemode survival [players]§7.
+command.extrareindevcommandsandgamerules.creative.info0=§dSets the gamemode of the player to creative mode.
+command.extrareindevcommandsandgamerules.creative.info1=§7A shortcut for §d/gamemode creative [players]§7.
+
+command.extrareindevcommandsandgamerules.peaceful.info=§dSets the difficulty to peaceful.
+command.extrareindevcommandsandgamerules.peaceful.execute=Set the difficulty to peaceful mode.
+command.extrareindevcommandsandgamerules.easy.info=§dSets the difficulty to easy.
+command.extrareindevcommandsandgamerules.easy.execute=Set the difficulty to easy mode.
+command.extrareindevcommandsandgamerules.normal.info=§dSets the difficulty to normal.
+command.extrareindevcommandsandgamerules.normal.execute=Set the difficulty to normal mode.
+command.extrareindevcommandsandgamerules.hard.info=§dSets the difficulty to hard.
+command.extrareindevcommandsandgamerules.hard.execute=Set the difficulty to hard mode.

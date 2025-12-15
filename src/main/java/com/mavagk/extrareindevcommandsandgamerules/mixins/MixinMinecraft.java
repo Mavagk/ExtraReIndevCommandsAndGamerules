@@ -26,7 +26,6 @@ public class MixinMinecraft {
 		if (var4.equalsIgnoreCase("newmusic")) {
 			if (ExtraReIndevCommandsAndGamerules.CONFIG.playNewmusicFolder)
 				this.sndManager.addMusicOverworldDay(path, file, resourcePackPath);
-			//((IMixinSoundManager)(Object)this.sndManager).addMusicOverworldClassic(path, file, resourcePackPath);
 		}
 	}
 }
