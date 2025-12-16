@@ -44,10 +44,10 @@ public class HealCommand extends Command {
 			selectedEntities = CommandEntitySelector.selectEntities(commandExecutor, args[1]);
 		}
 		// Get amount to heal
-		@Nullable Integer amount_to_heal = null;
+		@Nullable Integer amountToHeal = null;
 		if (args.length > 2) {
 			try {
-				amount_to_heal = Integer.parseInt(args[2]);
+				amountToHeal = Integer.parseInt(args[2]);
 			}
 			catch (NumberFormatException e) {
 				commandExecutor.log("command.extrareindevcommandsandgamerules.invalidInt");
@@ -55,52 +55,52 @@ public class HealCommand extends Command {
 			}
 		}
 		// Heal players
-		int entities_changed = 0;
+		int entitiesChanged = 0;
 		for (Entity entity : selectedEntities) {
 			if (!(entity instanceof EntityLiving)) {
 				continue;
 			}
-			EntityLiving entity_living = (EntityLiving)entity;
-			boolean was_successful = false;
-			int old_health = entity_living.health;
-			int new_health;
-			if (amount_to_heal == null) {
-				entity_living.heal(999999);
-				new_health = entity_living.health;
+			EntityLiving entityLiving = (EntityLiving)entity;
+			boolean wasSuccessful = false;
+			int oldHealth = entityLiving.health;
+			int newHealth;
+			if (amountToHeal == null) {
+				entityLiving.heal(999999);
+				newHealth = entityLiving.health;
 			}
 			else {
-				if (amount_to_heal < 0) {
-					new_health = entity_living.health + amount_to_heal;
-					if (new_health < 0)
-						new_health = 0;
-					entity_living.health = new_health;
-					if (new_health == 0)
-						entity_living.onDeath(null, DamageTypes.GENERIC);
+				if (amountToHeal < 0) {
+					newHealth = entityLiving.health + amountToHeal;
+					if (newHealth < 0)
+						newHealth = 0;
+					entityLiving.health = newHealth;
+					if (newHealth == 0)
+						entityLiving.onDeath(null, DamageTypes.GENERIC);
 				}
 				else {
-					entity_living.heal(amount_to_heal);
-					new_health = entity_living.health;
+					entityLiving.heal(amountToHeal);
+					newHealth = entityLiving.health;
 				}
 			}
-			if (new_health != old_health) {
-				was_successful = true;
+			if (newHealth != oldHealth) {
+				wasSuccessful = true;
 			}
-			if (was_successful) {
-				entities_changed++;
-				if (entity_living instanceof EntityPlayer)
-					((EntityPlayer)entity_living).addChatMessage("command.extrareindevcommandsandgamerules.execute");
+			if (wasSuccessful) {
+				entitiesChanged++;
+				if (entityLiving instanceof EntityPlayer)
+					((EntityPlayer)entityLiving).addChatMessage("command.extrareindevcommandsandgamerules.heal.execute");
 			}
-			else if (entities_changed == 1 && (entity_living instanceof EntityPlayer)) {
-				if (was_successful)
-					commandExecutor.sendNoticeToOps("Healing " + ((EntityPlayer)entity_living).username);
+			else if (entitiesChanged == 1 && (entityLiving instanceof EntityPlayer)) {
+				if (wasSuccessful)
+					commandExecutor.sendNoticeToOps("Healing " + ((EntityPlayer)entityLiving).username);
 				else
 					commandExecutor.log("Health not changed");
 			}
 		}
-		if (entities_changed > 1) {
-			commandExecutor.sendNoticeToOps("Changed the health of " + entities_changed + " entities");
+		if (entitiesChanged > 1) {
+			commandExecutor.sendNoticeToOps("Changed the health of " + entitiesChanged + " entities");
 		}
-		if (entities_changed == 0) {
+		if (entitiesChanged == 0) {
 			commandExecutor.log("No entities changed");
 		}
 	}

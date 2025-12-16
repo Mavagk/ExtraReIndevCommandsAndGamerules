@@ -23,16 +23,16 @@ public class ToggledownfallCommand extends Command {
 			return;
 		}
 		// Set weather and report
-		WorldInfo world_info = commandExecutor.getWorld().getWorldInfo();
-		if (world_info.getRaining()) {
+		WorldInfo worldInfo = commandExecutor.getWorld().getWorldInfo();
+		if (worldInfo.getRaining()) {
 			commandExecutor.getWorld().clearWeather();
 			commandExecutor.sendPacket(ICommandListener.Scope.OVERWORLD, (Packet)new Packet70Bed(4, 0), (EntityPlayer[])null);
 			commandExecutor.log("command.weather.clear");
 			commandExecutor.sendNoticeToOps("Clearing weather");
 		}
 		else {
-			world_info.setRaining(true);
-			world_info.setThundering(false);
+			worldInfo.setRaining(true);
+			worldInfo.setThundering(false);
 			commandExecutor.sendPacket(ICommandListener.Scope.OVERWORLD, (Packet)new Packet70Bed(5, 0), (EntityPlayer[])null);
 			commandExecutor.log("command.weather.rain");
 			commandExecutor.sendNoticeToOps("Setting weather to rain");

@@ -38,22 +38,22 @@ public class SurvivalCommand extends Command {
 			players = CommandEntitySelector.selectPlayers(commandExecutor, args[1]);
 		}
 		// Set gamemode
-		int gamemodes_changed = 0;
+		int gamemodesChanged = 0;
 		for (EntityPlayer player : players) {
-			boolean was_successful = player.changeGamemode(0);
-			if (was_successful) {
+			boolean wasSuccessful = player.changeGamemode(0);
+			if (wasSuccessful) {
 				player.addChatMessage("command.gamemode.changed");
-				gamemodes_changed++;
+				gamemodesChanged++;
 			}
 			else if (players.size() == 1) {
-				if (was_successful)
+				if (wasSuccessful)
 					commandExecutor.sendNoticeToOps("Setting " + player.username + " to survival mode");
 				else
 					commandExecutor.log(player.username + " if already in survival mode");
 			}
 		}
 		if (players.size() > 1) {
-			commandExecutor.sendNoticeToOps("Changed the gamemode of " + gamemodes_changed + " players");
+			commandExecutor.sendNoticeToOps("Changed the gamemode of " + gamemodesChanged + " players");
 		}
 		if (players.size() == 0) {
 			commandExecutor.log("No players selected");

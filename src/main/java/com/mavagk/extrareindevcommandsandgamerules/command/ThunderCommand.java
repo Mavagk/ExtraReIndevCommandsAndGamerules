@@ -23,9 +23,9 @@ public class ThunderCommand extends Command {
 			return;
 		}
 		// Set weather and report
-		WorldInfo world_info = commandExecutor.getWorld().getWorldInfo();
-		world_info.setRaining(true);
-		world_info.setThundering(true);
+		WorldInfo worldInfo = commandExecutor.getWorld().getWorldInfo();
+		worldInfo.setRaining(true);
+		worldInfo.setThundering(true);
 		commandExecutor.sendPacket(ICommandListener.Scope.OVERWORLD, (Packet)new Packet70Bed(6, 0), (EntityPlayer[])null);
 		commandExecutor.log("command.weather.thunder");
 		commandExecutor.sendNoticeToOps("Setting weather to thunder");

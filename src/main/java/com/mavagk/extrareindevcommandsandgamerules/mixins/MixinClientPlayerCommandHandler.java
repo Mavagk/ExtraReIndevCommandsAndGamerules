@@ -17,6 +17,7 @@ import com.mavagk.extrareindevcommandsandgamerules.command.NormalCommand;
 import com.mavagk.extrareindevcommandsandgamerules.command.OriginCommand;
 import com.mavagk.extrareindevcommandsandgamerules.command.PeacefulCommand;
 import com.mavagk.extrareindevcommandsandgamerules.command.RainCommand;
+import com.mavagk.extrareindevcommandsandgamerules.command.SetblockCommand;
 import com.mavagk.extrareindevcommandsandgamerules.command.SunsetCommand;
 import com.mavagk.extrareindevcommandsandgamerules.command.SurvivalCommand;
 import com.mavagk.extrareindevcommandsandgamerules.command.ThunderCommand;
@@ -46,5 +47,6 @@ public abstract class MixinClientPlayerCommandHandler {
 		((ClientPlayerCommandHandler)(Object)this).addCommand((Command)new ThunderCommand());
 		((ClientPlayerCommandHandler)(Object)this).addCommand((Command)new ToggledownfallCommand());
 		((ClientPlayerCommandHandler)(Object)this).addCommand((Command)new HealCommand());
+		((ClientPlayerCommandHandler)(Object)this).addCommand((Command)new SetblockCommand());
 	}
 }
