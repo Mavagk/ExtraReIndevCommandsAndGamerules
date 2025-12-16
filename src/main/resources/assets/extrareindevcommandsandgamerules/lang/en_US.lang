@@ -30,4 +30,9 @@ command.extrareindevcommandsandgamerules.rain.info1=§7A shortcut for §d/weathe
 command.extrareindevcommandsandgamerules.thunder.info0=§dSets the weather to thunder.
 command.extrareindevcommandsandgamerules.thunder.info1=§7A shortcut for §d/weather thunder§7.
 
+command.extrareindevcommandsandgamerules.execute=You health was changed
+command.extrareindevcommandsandgamerules.heal.info=§dHeals the selected entities.
+
+command.extrareindevcommandsandgamerules.invalidInt=Invalid integer value entered
+
 tile.extrareindevcommandsandgamerules.bed.sleepDisabled=Sleeping has been disabled

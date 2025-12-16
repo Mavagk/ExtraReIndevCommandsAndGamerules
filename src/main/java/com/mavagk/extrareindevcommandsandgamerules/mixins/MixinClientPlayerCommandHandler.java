@@ -10,6 +10,7 @@ import com.mavagk.extrareindevcommandsandgamerules.command.DayCommand;
 import com.mavagk.extrareindevcommandsandgamerules.command.EasyCommand;
 import com.mavagk.extrareindevcommandsandgamerules.command.FairCommand;
 import com.mavagk.extrareindevcommandsandgamerules.command.HardCommand;
+import com.mavagk.extrareindevcommandsandgamerules.command.HealCommand;
 import com.mavagk.extrareindevcommandsandgamerules.command.NightCommand;
 import com.mavagk.extrareindevcommandsandgamerules.command.NoonCommand;
 import com.mavagk.extrareindevcommandsandgamerules.command.NormalCommand;
@@ -44,5 +45,6 @@ public abstract class MixinClientPlayerCommandHandler {
 		((ClientPlayerCommandHandler)(Object)this).addCommand((Command)new RainCommand());
 		((ClientPlayerCommandHandler)(Object)this).addCommand((Command)new ThunderCommand());
 		((ClientPlayerCommandHandler)(Object)this).addCommand((Command)new ToggledownfallCommand());
+		((ClientPlayerCommandHandler)(Object)this).addCommand((Command)new HealCommand());
 	}
 }
