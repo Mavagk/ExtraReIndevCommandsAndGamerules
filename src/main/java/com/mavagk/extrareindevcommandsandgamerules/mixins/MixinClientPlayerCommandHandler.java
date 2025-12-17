@@ -22,6 +22,7 @@ import com.mavagk.extrareindevcommandsandgamerules.command.SunsetCommand;
 import com.mavagk.extrareindevcommandsandgamerules.command.SurvivalCommand;
 import com.mavagk.extrareindevcommandsandgamerules.command.ThunderCommand;
 import com.mavagk.extrareindevcommandsandgamerules.command.ToggledownfallCommand;
+import com.mavagk.extrareindevcommandsandgamerules.command.WorldInfoCommand;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.command.ClientPlayerCommandHandler;
@@ -48,5 +49,6 @@ public abstract class MixinClientPlayerCommandHandler {
 		((ClientPlayerCommandHandler)(Object)this).addCommand((Command)new ToggledownfallCommand());
 		((ClientPlayerCommandHandler)(Object)this).addCommand((Command)new HealCommand());
 		((ClientPlayerCommandHandler)(Object)this).addCommand((Command)new SetblockCommand());
+		((ClientPlayerCommandHandler)(Object)this).addCommand((Command)new WorldInfoCommand());
 	}
 }

@@ -8,6 +8,7 @@ import net.minecraft.common.command.Command;
 import net.minecraft.common.command.ICommandListener;
 import net.minecraft.common.command.IllegalCmdListenerOperation;
 import net.minecraft.common.entity.player.EntityPlayer;
+import net.minecraft.common.world.chunk.ChunkCoordinates;
 
 public abstract class ModCommand extends Command {
 	public ModCommand(String name, boolean opOnly, boolean isHidden) {
@@ -86,5 +87,13 @@ public abstract class ModCommand extends Command {
 		catch (NumberFormatException e) {
 			return null;
 		}
+	}
+
+	protected String formatCoordinates(int x, int y, int z) {
+		return "(" + x + ", " + y + ", " + z + ")";
+	}
+
+	protected String formatCoordinates(ChunkCoordinates coordinates) {
+		return formatCoordinates(coordinates.x, coordinates.y, coordinates.z);
 	}
 }
