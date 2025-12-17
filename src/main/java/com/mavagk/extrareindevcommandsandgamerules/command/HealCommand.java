@@ -6,7 +6,6 @@ import java.util.Vector;
 
 import org.jetbrains.annotations.Nullable;
 
-import net.minecraft.common.command.Command;
 import net.minecraft.common.command.CommandEntitySelector;
 import net.minecraft.common.command.CommandErrorHandler;
 import net.minecraft.common.command.ICommandListener;
@@ -18,7 +17,7 @@ import net.minecraft.common.entity.player.EntityPlayer;
 import net.minecraft.common.stats.StatCollector;
 import net.minecraft.common.util.ChatColors;
 
-public class HealCommand extends Command {
+public class HealCommand extends ModCommand {
 	public HealCommand() {
 		super("heal", true, false);
 	}

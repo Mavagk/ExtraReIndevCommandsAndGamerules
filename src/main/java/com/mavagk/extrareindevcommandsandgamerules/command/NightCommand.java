@@ -1,12 +1,11 @@
 package com.mavagk.extrareindevcommandsandgamerules.command;
 
-import net.minecraft.common.command.Command;
 import net.minecraft.common.command.CommandErrorHandler;
 import net.minecraft.common.command.ICommandListener;
 import net.minecraft.common.command.IllegalCmdListenerOperation;
 import net.minecraft.common.util.ChatColors;
 
-public class NightCommand extends Command {
+public class NightCommand extends ModCommand {
 	public NightCommand() {
 		super("night", true, false);
 	}

@@ -1,13 +1,12 @@
 package com.mavagk.extrareindevcommandsandgamerules.command;
 
 import net.minecraft.client.Minecraft;
-import net.minecraft.common.command.Command;
 import net.minecraft.common.command.CommandErrorHandler;
 import net.minecraft.common.command.ICommandListener;
 import net.minecraft.common.command.IllegalCmdListenerOperation;
 import net.minecraft.common.util.ChatColors;
 
-public class EasyCommand extends Command {
+public class EasyCommand extends ModCommand {
 	public EasyCommand() {
 		super("easy", true, false);
 	}

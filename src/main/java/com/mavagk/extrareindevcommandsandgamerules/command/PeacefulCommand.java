@@ -1,13 +1,12 @@
 package com.mavagk.extrareindevcommandsandgamerules.command;
 
 import net.minecraft.client.Minecraft;
-import net.minecraft.common.command.Command;
 import net.minecraft.common.command.CommandErrorHandler;
 import net.minecraft.common.command.ICommandListener;
 import net.minecraft.common.command.IllegalCmdListenerOperation;
 import net.minecraft.common.util.ChatColors;
 
-public class PeacefulCommand extends Command {
+public class PeacefulCommand extends ModCommand {
 	public PeacefulCommand() {
 		super("peaceful", true, false);
 	}

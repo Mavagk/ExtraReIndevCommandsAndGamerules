@@ -2,112 +2,60 @@ package com.mavagk.extrareindevcommandsandgamerules.command;
 
 import org.jetbrains.annotations.Nullable;
 
-import net.minecraft.common.command.Command;
 import net.minecraft.common.command.CommandErrorHandler;
 import net.minecraft.common.command.ICommandListener;
 import net.minecraft.common.command.IllegalCmdListenerOperation;
 import net.minecraft.common.util.ChatColors;
-import net.minecraft.common.util.math.Vec3D;
 import net.minecraft.common.world.World;
 
-public class SetblockCommand extends Command {
+public class SetblockCommand extends ModCommand {
 	public SetblockCommand() {
 		super("setblock", true, false);
 	}
 
 	@Override
 	public void onExecute(String[] args, ICommandListener commandExecutor) throws IllegalCmdListenerOperation {
-		// Get arguments
+		// Get arguments and parse
 		if (args.length != 2 && args.length != 3 && args.length != 5 && args.length != 6) {
 			CommandErrorHandler.commandUsageMessage(commandSyntax(), commandExecutor);
 			return;
 		}
-		@Nullable String xString = null;
-		@Nullable String yString = null;
-		@Nullable String zString = null;
-		String idString = null;
-		@Nullable String metadataString = null;
-		if (args.length == 2) {
-			if (!commandExecutor.isPlayer()) {
-				CommandErrorHandler.commandUsageMessage(commandSyntax(), commandExecutor);
-				return;
-			}
-			idString = args[1];
+		@Nullable Integer x = null;
+		@Nullable Integer y = null;
+		@Nullable Integer z = null;
+		@Nullable Integer id = null;
+		@Nullable Integer metadata = null;
+		if (args.length == 2 || args.length == 3) {
+			x = parseRelativeBlockCoordinateX(null, commandExecutor);
+			y = parseRelativeBlockCoordinateY(null, commandExecutor);
+			z = parseRelativeBlockCoordinateZ(null, commandExecutor);
+			id = parseBlockId(args[1]);
 		}
-		if (args.length == 3) {
-			if (!commandExecutor.isPlayer()) {
-				CommandErrorHandler.commandUsageMessage(commandSyntax(), commandExecutor);
-				return;
-			}
-			idString = args[1];
-			metadataString = args[2];
+		if (args.length == 3) metadata = parseBlockMetadata(args[2]);
+		if (args.length == 5 || args.length == 6) {
+			x = parseRelativeBlockCoordinateX(args[1], commandExecutor);
+			y = parseRelativeBlockCoordinateY(args[2], commandExecutor);
+			z = parseRelativeBlockCoordinateZ(args[3], commandExecutor);
+			id = parseBlockId(args[4]);
 		}
-		if (args.length == 5) {
-			xString = args[1];
-			yString = args[2];
-			zString = args[3];
-			idString = args[4];
+		if (args.length == 6) metadata = parseBlockMetadata(args[5]);
+		// Check for errors while parsing
+		if (x == null || y == null || z == null) {
+			commandExecutor.log("command.extrareindevcommandsandgamerules.invalidPosition");
+			return;
 		}
-		if (args.length == 6) {
-			xString = args[1];
-			yString = args[2];
-			zString = args[3];
-			idString = args[4];
-			metadataString = args[5];
+		if (id == null) {
+			commandExecutor.log("command.extrareindevcommandsandgamerules.invalidBlockId");
+			return;
 		}
-		// Get position
-		int x;
-		int y;
-		int z;
-		if (commandExecutor.isPlayer()) {
-			Vec3D relativeTo = commandExecutor.getPosition();
-			try {
-				if (xString == null || xString.equals("~")) x = 0;
-				else x = Integer.parseInt(xString.replace("~", ""));
-				if (yString == null || yString.equals("~")) y = 0;
-				else y = Integer.parseInt(yString.replace("~", ""));
-				if (zString == null || zString.equals("~")) z = 0;
-				else z = Integer.parseInt(zString.replace("~", ""));
-			}
-			catch (NumberFormatException e) {
-				commandExecutor.log("command.extrareindevcommandsandgamerules.invalidInt");
-				return;
-			}
-			if (xString == null || xString.startsWith("~")) x += (int)relativeTo.xCoord;
-			if (yString == null || yString.startsWith("~")) y += (int)relativeTo.yCoord;
-			if (zString == null || zString.startsWith("~")) z += (int)relativeTo.zCoord;
-		}
-		else {
-			try {
-				x = Integer.parseInt(xString);
-				y = Integer.parseInt(yString);
-				z = Integer.parseInt(zString);
-			}
-			catch (NumberFormatException e) {
-				commandExecutor.log("command.extrareindevcommandsandgamerules.invalidInt");
-				return;
-			}
-		}
-		// Get block ID
-		int blockId;
-		@Nullable Integer metadataValue = null;
-		try {
-			blockId = Integer.parseInt(idString);
-			if (metadataString != null) metadataValue = Integer.parseInt(metadataString);
-		}
-		catch (NumberFormatException e) {
-			commandExecutor.log("command.extrareindevcommandsandgamerules.invalidInt");
+		if ((args.length == 3 || args.length == 6) && metadata == null) {
+			commandExecutor.log("command.extrareindevcommandsandgamerules.invalidMetadata");
 			return;
 		}
 		// Set block
 		World world = commandExecutor.getWorld();
-		if (blockId < 0) {
-			commandExecutor.log("command.extrareindevcommandsandgamerules.invalidInt");
-			return;
-		}
-		if (metadataValue == null) world.setBlock(x, y, z, blockId);
-		else world.setBlockAndMetadata(x, y, z, blockId, metadataValue);
-
+		if (metadata == null) world.setBlock(x, y, z, id);
+		else world.setBlockAndMetadata(x, y, z, id, metadata);
 		commandExecutor.log("command.extrareindevcommandsandgamerules.setblock.execute");
 	}
 

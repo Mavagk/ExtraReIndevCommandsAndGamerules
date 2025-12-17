@@ -3,7 +3,6 @@ package com.mavagk.extrareindevcommandsandgamerules.command;
 import java.util.List;
 import java.util.Vector;
 
-import net.minecraft.common.command.Command;
 import net.minecraft.common.command.CommandEntitySelector;
 import net.minecraft.common.command.CommandErrorHandler;
 import net.minecraft.common.command.ICommandListener;
@@ -12,7 +11,7 @@ import net.minecraft.common.entity.player.EntityPlayer;
 import net.minecraft.common.stats.StatCollector;
 import net.minecraft.common.util.ChatColors;
 
-public class CreativeCommand extends Command {
+public class CreativeCommand extends ModCommand {
 	public CreativeCommand() {
 		super("creative", true, false);
 	}

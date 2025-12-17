@@ -37,5 +37,8 @@ command.extrareindevcommandsandgamerules.setblock.info=§dSets the block id
 command.extrareindevcommandsandgamerules.setblock.execute=Block set
 
 command.extrareindevcommandsandgamerules.invalidInt=Invalid integer value entered
+command.extrareindevcommandsandgamerules.invalidPosition=Invalid position
+command.extrareindevcommandsandgamerules.invalidMetadata=Invalid block metadata value
+command.extrareindevcommandsandgamerules.invalidBlockId=Invalid block id
 
 tile.extrareindevcommandsandgamerules.bed.sleepDisabled=Sleeping has been disabled

@@ -3,7 +3,6 @@ package com.mavagk.extrareindevcommandsandgamerules.command;
 import java.util.Collections;
 import java.util.List;
 
-import net.minecraft.common.command.Command;
 import net.minecraft.common.command.CommandEntitySelector;
 import net.minecraft.common.command.CommandErrorHandler;
 import net.minecraft.common.command.ICommandListener;
@@ -11,7 +10,7 @@ import net.minecraft.common.command.IllegalCmdListenerOperation;
 import net.minecraft.common.entity.Entity;
 import net.minecraft.common.util.ChatColors;
 
-public class OriginCommand extends Command {
+public class OriginCommand extends ModCommand {
 	public OriginCommand() {
 		super("origin", true, false);
 	}

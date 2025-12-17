@@ -1,6 +1,5 @@
 package com.mavagk.extrareindevcommandsandgamerules.command;
 
-import net.minecraft.common.command.Command;
 import net.minecraft.common.command.CommandErrorHandler;
 import net.minecraft.common.command.ICommandListener;
 import net.minecraft.common.command.IllegalCmdListenerOperation;
@@ -10,7 +9,7 @@ import net.minecraft.common.networking.Packet70Bed;
 import net.minecraft.common.util.ChatColors;
 import net.minecraft.common.world.WorldInfo;
 
-public class RainCommand extends Command {
+public class RainCommand extends ModCommand {
 	public RainCommand() {
 		super("rain", true, false);
 	}
