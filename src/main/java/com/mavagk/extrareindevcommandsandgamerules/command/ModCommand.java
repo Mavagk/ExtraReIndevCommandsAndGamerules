@@ -8,6 +8,7 @@ import net.minecraft.common.command.Command;
 import net.minecraft.common.command.ICommandListener;
 import net.minecraft.common.command.IllegalCmdListenerOperation;
 import net.minecraft.common.entity.player.EntityPlayer;
+import net.minecraft.common.stats.StatCollector;
 import net.minecraft.common.world.chunk.ChunkCoordinates;
 
 public abstract class ModCommand extends Command {
@@ -95,5 +96,10 @@ public abstract class ModCommand extends Command {
 
 	protected String formatCoordinates(ChunkCoordinates coordinates) {
 		return formatCoordinates(coordinates.x, coordinates.y, coordinates.z);
+	}
+
+	protected String formatBoolean(boolean value) {
+		if (value) return StatCollector.translateToLocal("worldinfovalue.extrareindevcommandsandgamerules.true");
+		return StatCollector.translateToLocal("worldinfovalue.extrareindevcommandsandgamerules.false");
 	}
 }
