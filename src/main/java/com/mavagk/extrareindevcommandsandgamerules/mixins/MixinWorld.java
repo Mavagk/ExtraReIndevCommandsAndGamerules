@@ -18,4 +18,11 @@ public class MixinWorld {
 			((World)(Object)this).setWorldTime(worldTime);
 		}
 	}
+
+	@Inject(method = "updateWeather", at = @At("HEAD"), cancellable = true)
+	private void updateWeather(CallbackInfo info) {
+		if (!ModGamerules.doWeatherCycle.getBoolean(((World)(Object)this).getSaveHandler())) {
+			info.cancel();
+		}
+	}
 }

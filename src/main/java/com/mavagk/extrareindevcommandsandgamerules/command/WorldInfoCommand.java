@@ -38,7 +38,8 @@ public class WorldInfoCommand extends ModCommand {
 		commandExecutor.log(StatCollector.translateToLocal("worldinfovar.extrareindevcommandsandgamerules.isThundering")                 + ": " + formatBoolean(worldInfo.getThundering()));
 		commandExecutor.log(StatCollector.translateToLocal("worldinfovar.extrareindevcommandsandgamerules.thunderTime")                  + ": " + worldInfo.getThunderTime());
 		commandExecutor.log(StatCollector.translateToLocal("worldinfovar.extrareindevcommandsandgamerules.gamemode")                     + ": " + worldInfo.getGameType());
-		commandExecutor.log(StatCollector.translateToLocal("worldinfovar.extrareindevcommandsandgamerules.generatorType")                + ": " + worldInfo.getGenType());
+		commandExecutor.log(StatCollector.translateToLocal("worldinfovar.extrareindevcommandsandgamerules.generatorType")                + ": " +
+			StatCollector.translateToLocal(worldInfo.getGenType().getTranslateKey()));
 		commandExecutor.log(StatCollector.translateToLocal("worldinfovar.extrareindevcommandsandgamerules.isHardcore")                   + ": " + formatBoolean(worldInfo.isHardcoreModeEnabled()));
 		commandExecutor.log(StatCollector.translateToLocal("worldinfovar.extrareindevcommandsandgamerules.areMapFeaturesEnabled")        + ": " + formatBoolean(worldInfo.isMapFeaturesEnabled()));
 		commandExecutor.log(StatCollector.translateToLocal("worldinfovar.extrareindevcommandsandgamerules.areCheatsEnabled")             + ": " + formatBoolean(worldInfo.isCheatsEnabled()));
