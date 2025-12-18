@@ -12,6 +12,7 @@
     "MixinBlockBed",
     "MixinEntityCreeper",
     "MixinWorld",
-    "MixinBlock"
+    "MixinBlock",
+    "MixinEntityLiving"
   ]
 }
