@@ -11,6 +11,7 @@
     "MixinMinecraft",
     "MixinBlockBed",
     "MixinEntityCreeper",
-    "MixinWorld"
+    "MixinWorld",
+    "MixinBlock"
   ]
 }

@@ -11,4 +11,5 @@ public class ModGamerules {
 	public static final Gamerule doCreeperDeathExplosions = Gamerules.registerBooleanGamerule("doCreeperDeathExplosions", false);
 	public static final Gamerule doDaylightCycle = Gamerules.registerBooleanGamerule("doDaylightCycle", true);
 	public static final Gamerule doWeatherCycle = Gamerules.registerBooleanGamerule("doWeatherCycle", true);
+	public static final Gamerule doTileDrops = Gamerules.registerBooleanGamerule("doTileDrops", true);
 }
