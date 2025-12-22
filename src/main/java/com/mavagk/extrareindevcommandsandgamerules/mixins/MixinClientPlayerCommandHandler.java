@@ -6,8 +6,10 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import com.mavagk.extrareindevcommandsandgamerules.command.AscendCommand;
+import com.mavagk.extrareindevcommandsandgamerules.command.BottomCommand;
 import com.mavagk.extrareindevcommandsandgamerules.command.CreativeCommand;
 import com.mavagk.extrareindevcommandsandgamerules.command.DayCommand;
+import com.mavagk.extrareindevcommandsandgamerules.command.DescendCommand;
 import com.mavagk.extrareindevcommandsandgamerules.command.EasyCommand;
 import com.mavagk.extrareindevcommandsandgamerules.command.FairCommand;
 import com.mavagk.extrareindevcommandsandgamerules.command.HardCommand;
@@ -23,6 +25,7 @@ import com.mavagk.extrareindevcommandsandgamerules.command.SunsetCommand;
 import com.mavagk.extrareindevcommandsandgamerules.command.SurvivalCommand;
 import com.mavagk.extrareindevcommandsandgamerules.command.ThunderCommand;
 import com.mavagk.extrareindevcommandsandgamerules.command.ToggledownfallCommand;
+import com.mavagk.extrareindevcommandsandgamerules.command.TopCommand;
 import com.mavagk.extrareindevcommandsandgamerules.command.WorldInfoCommand;
 
 import net.minecraft.client.Minecraft;
@@ -52,5 +55,8 @@ public abstract class MixinClientPlayerCommandHandler {
 		((ClientPlayerCommandHandler)(Object)this).addCommand((Command)new SetblockCommand());
 		((ClientPlayerCommandHandler)(Object)this).addCommand((Command)new WorldInfoCommand());
 		((ClientPlayerCommandHandler)(Object)this).addCommand((Command)new AscendCommand());
+		((ClientPlayerCommandHandler)(Object)this).addCommand((Command)new DescendCommand());
+		((ClientPlayerCommandHandler)(Object)this).addCommand((Command)new TopCommand());
+		((ClientPlayerCommandHandler)(Object)this).addCommand((Command)new BottomCommand());
 	}
 }

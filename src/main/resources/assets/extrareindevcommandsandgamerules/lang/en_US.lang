@@ -43,8 +43,22 @@ command.extrareindevcommandsandgamerules.invalidBlockId=Invalid block id
 command.extrareindevcommandsandgamerules.worldinfo.execute=§6Variables
 
 command.extrareindevcommandsandgamerules.worldinfo.info=§dPrints out some java world info variables
-command.extrareindevcommandsandgamerules.ascend.info=§dAscend up to the next block that has at least two blocks of air above it
 
+command.extrareindevcommandsandgamerules.ascend.info=§dAscend up to the next block that has at least two blocks of air above it
+command.extrareindevcommandsandgamerules.ascend.execute=Went up one level
+command.extrareindevcommandsandgamerules.ascend.error=No solid blocks above the player to teleport onto
+
+command.extrareindevcommandsandgamerules.descend.info=Descend down to the next solid block that has at least two blocks of air above it
+command.extrareindevcommandsandgamerules.descend.execute=Went down one level
+command.extrareindevcommandsandgamerules.descend.error=No suitable solid blocks below the player to teleport onto
+
+command.extrareindevcommandsandgamerules.top.info=§dAscend up to the topmost block that has at least two blocks of air above it
+command.extrareindevcommandsandgamerules.top.execute=Went up to the topmost level
+command.extrareindevcommandsandgamerules.top.error=No solid blocks above the player to teleport onto
+
+command.extrareindevcommandsandgamerules.bottom.info=Descend down to the bottommost solid block that has at least two blocks of air above it
+command.extrareindevcommandsandgamerules.bottom.execute=Went down to the bottommost level
+command.extrareindevcommandsandgamerules.bottom.error=No suitable solid blocks below the player to teleport onto
 
 worldinfovar.extrareindevcommandsandgamerules.seed=Seed
 worldinfovar.extrareindevcommandsandgamerules.spawn=Spawn
