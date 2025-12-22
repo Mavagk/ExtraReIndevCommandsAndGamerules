@@ -9,10 +9,11 @@ import net.minecraft.common.command.ICommandListener;
 import net.minecraft.common.command.IllegalCmdListenerOperation;
 import net.minecraft.common.entity.Entity;
 import net.minecraft.common.util.ChatColors;
+import net.minecraft.common.world.WorldInfo;
 
-public class OriginCommand extends ModCommand {
-	public OriginCommand() {
-		super("origin", true, false);
+public class RespawnCommand extends ModCommand {
+	public RespawnCommand() {
+		super("respawn", true, false);
 	}
 
 	@Override
@@ -35,18 +36,19 @@ public class OriginCommand extends ModCommand {
 		}
 		// Teleport entities
 		for (Entity entity: selectedEntities) {
-			entity.teleportTo(0, commandExecutor.getWorld().getFirstUncoveredBlockY(0, 0) + 2.65, 0, 0, 0);
+			WorldInfo worldInfo = commandExecutor.getWorld().worldInfo;
+			entity.teleportTo(worldInfo.getSpawnX(), worldInfo.getSpawnY() + 2.65, worldInfo.getSpawnZ(), 0, 0);
 		} 
 		commandExecutor.sendNoticeToOps("Teleported " + selectedEntities.size() + " entities!");
 	}
 
 	@Override
 	public void printHelpInformation(ICommandListener commandExecutor) {
-		commandExecutor.log("command.extrareindevcommandsandgamerules.origin.info");
+		commandExecutor.log("command.extrareindevcommandsandgamerules.respawn.info");
 	}
 
 	@Override
 	public String commandSyntax() {
-		return ChatColors.YELLOW + "/origin [player/entities]";
+		return ChatColors.YELLOW + "/respawn [player/entities]";
 	}
 }

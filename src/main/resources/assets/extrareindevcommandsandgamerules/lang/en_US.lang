@@ -1,4 +1,6 @@
-command.extrareindevcommandsandgamerules.origin.info=§dTeleports selected entities to (0, 150, 0).
+command.extrareindevcommandsandgamerules.origin.info=§dTeleports selected entities to (0, 0).
+command.extrareindevcommandsandgamerules.respawn.info§dTeleports selected entities to spawn.
+
 
 command.extrareindevcommandsandgamerules.day.info0=§dSets the time to day.
 command.extrareindevcommandsandgamerules.day.info1=§7A shortcut for §d/time set day§7.
