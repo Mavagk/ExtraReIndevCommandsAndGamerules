@@ -16,6 +16,10 @@ public abstract class ModCommand extends Command {
 		super(name, opOnly, isHidden);
 	}
 
+	public ModCommand(String name, boolean opOnly, boolean isHidden, String... aliases) {
+		super(name, opOnly, isHidden, aliases);
+	}
+
 	/// Returns `coordinateString` parsed to an integer. Allows `coordinateString` to start with a `~` char to make it relativeTo to `relativeTo` if it is not null. Returns null if there is an error.
 	protected @Nullable Integer parseRelativeBlockCoordinate(@Nullable String coordinateString, @Nullable Integer relativeTo) {
 		try {

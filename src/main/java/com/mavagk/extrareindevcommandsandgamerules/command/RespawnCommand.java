@@ -13,7 +13,7 @@ import net.minecraft.common.world.WorldInfo;
 
 public class RespawnCommand extends ModCommand {
 	public RespawnCommand() {
-		super("respawn", true, false);
+		super("respawn", true, false, "spawn");
 	}
 
 	@Override

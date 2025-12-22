@@ -1,6 +1,5 @@
 package com.mavagk.extrareindevcommandsandgamerules.command;
 
-import net.minecraft.common.command.Command;
 import net.minecraft.common.command.CommandErrorHandler;
 import net.minecraft.common.command.ICommandListener;
 import net.minecraft.common.command.IllegalCmdListenerOperation;
@@ -9,7 +8,7 @@ import net.minecraft.common.stats.StatCollector;
 import net.minecraft.common.util.ChatColors;
 import net.minecraft.common.world.World;
 
-public class BottomCommand extends Command {
+public class BottomCommand extends ModCommand {
 	public BottomCommand() {
 		super("bottom", true, false, "bottommost");
 	}
