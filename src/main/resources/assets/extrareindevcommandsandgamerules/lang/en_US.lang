@@ -43,6 +43,8 @@ command.extrareindevcommandsandgamerules.invalidBlockId=Invalid block id
 command.extrareindevcommandsandgamerules.worldinfo.execute=§6Variables
 
 command.extrareindevcommandsandgamerules.worldinfo.info=§dPrints out some java world info variables
+command.extrareindevcommandsandgamerules.ascend.info=§dAscend up to the next block that has at least two blocks of air above it
+
 
 worldinfovar.extrareindevcommandsandgamerules.seed=Seed
 worldinfovar.extrareindevcommandsandgamerules.spawn=Spawn

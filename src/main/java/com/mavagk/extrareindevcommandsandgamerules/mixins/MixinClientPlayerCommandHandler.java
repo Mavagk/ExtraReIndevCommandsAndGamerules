@@ -5,6 +5,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
+import com.mavagk.extrareindevcommandsandgamerules.command.AscendCommand;
 import com.mavagk.extrareindevcommandsandgamerules.command.CreativeCommand;
 import com.mavagk.extrareindevcommandsandgamerules.command.DayCommand;
 import com.mavagk.extrareindevcommandsandgamerules.command.EasyCommand;
@@ -50,5 +51,6 @@ public abstract class MixinClientPlayerCommandHandler {
 		((ClientPlayerCommandHandler)(Object)this).addCommand((Command)new HealCommand());
 		((ClientPlayerCommandHandler)(Object)this).addCommand((Command)new SetblockCommand());
 		((ClientPlayerCommandHandler)(Object)this).addCommand((Command)new WorldInfoCommand());
+		((ClientPlayerCommandHandler)(Object)this).addCommand((Command)new AscendCommand());
 	}
 }
