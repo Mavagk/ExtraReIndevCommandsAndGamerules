@@ -13,4 +13,5 @@ public class ModGamerules {
 	public static final Gamerule doWeatherCycle = Gamerules.registerBooleanGamerule("doWeatherCycle", true);
 	public static final Gamerule doTileDrops = Gamerules.registerBooleanGamerule("doTileDrops", true);
 	public static final Gamerule doPlayerDrowningDamage = Gamerules.registerBooleanGamerule("doPlayerDrowningDamage", true);
+	public static final Gamerule doItemSlotRestrictions = Gamerules.registerBooleanGamerule("doItemSlotRestrictions", true);
 }

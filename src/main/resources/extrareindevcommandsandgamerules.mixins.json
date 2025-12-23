@@ -13,6 +13,11 @@
     "MixinEntityCreeper",
     "MixinWorld",
     "MixinBlock",
-    "MixinEntityLiving"
+    "MixinEntityLiving",
+    "MixinSlotArmor",
+    "MixinSlotCrafting",
+    "MixinSlotCrate",
+    "MixinSlotFurnace",
+    "MixinSlotIncinerator"
   ]
 }
